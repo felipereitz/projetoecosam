@@ -1,0 +1,19 @@
+{
+    "language": "english",
+    "carregarimagem": "Upload Image",
+    "tamanhodecadaretangulo": "Size of Each Rectangle",
+    "largura": "Width:",
+    "altura": "Height:",
+    "iniciar": "Start",
+    "recortandoimagens": "cropping images: ",
+    "cortar": "Cut",
+    "editarlinhas": "Edit Rows",
+    "linha": "Row",
+    "retangulos": "rectangles",
+    "erropreenchatodososvalores": "Error! Write all values",
+    "retornar": "Return"
+
+
+
+
+}

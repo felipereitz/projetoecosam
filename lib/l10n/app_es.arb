@@ -1,0 +1,16 @@
+{
+    "language": "espanhol",
+    "carregarimagem": "Cargar imagen",
+    "tamanhodecadaretangulo": "Tamaño de cada rectángulo",
+    "largura": "Ancho:",
+    "altura": "Altura:",
+    "iniciar": "Start",
+    "recortandoimagens": "recortar imágenes: ",
+    "cortar": "Corte",
+    "editarlinhas": "Editar líneas",
+    "linha": "Línea",
+    "retangulos": "rectángulos",
+    "erropreenchatodososvalores": "¡Error! Rellene todos los valores",
+    "retornar": "volver"
+
+}
