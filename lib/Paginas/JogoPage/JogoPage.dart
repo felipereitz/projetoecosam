@@ -1,6 +1,8 @@
 import 'dart:ui';
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:projetoecosam/ListaCores/LixoClass.dart';
 import 'package:projetoecosam/ListaCores/latasList.dart';
 import 'package:projetoecosam/ListaCores/todosJuntosList.dart';
@@ -24,10 +26,13 @@ class _JogoPageState extends State<JogoPage> with TickerProviderStateMixin  {
   Color corMensagem= Colors.green;
   String textoMensagem= 'Acertou!';
 
+  final acertoSound = AudioPlayer();
+  final erroSound = AudioPlayer();
   
   @override
   void initState() {
     todoLixosList.shuffle();
+    iniciaSom();
     mensagemAnimationController = AnimationController(vsync: this);
     for(var i=0;i<latasList.length;i++){
       animationControllerList.add(AnimationController(
@@ -133,6 +138,8 @@ class _JogoPageState extends State<JogoPage> with TickerProviderStateMixin  {
                           textoMensagem='Acertou!';
                           mensagemAnimationController.reset();
                           mensagemAnimationController.forward();
+                          acertoSound.play(AssetSource('acerto.mp3'));
+
                           setState(() {
 
                           });
@@ -146,6 +153,8 @@ class _JogoPageState extends State<JogoPage> with TickerProviderStateMixin  {
                           textoMensagem='Errou!';
                           mensagemAnimationController.reset();
                           mensagemAnimationController.forward();
+                          erroSound.play(AssetSource('erro.mp3'));
+
                           setState(() {
 
                           });
@@ -230,5 +239,8 @@ class _JogoPageState extends State<JogoPage> with TickerProviderStateMixin  {
     ResultadoPage(
         acertos: bloc.acertosController.value,
         erros: bloc.errosController.value)));
+  }
+  void iniciaSom()async{
+
   }
 }
